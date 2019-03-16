@@ -7,12 +7,12 @@ export class Dialog extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-    const unirest = require('unirest')
-    unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2019-05-01?inboundpartialdate=2019-06-01")
-        .header("X-RapidAPI-Key", "8f1774236cmsh7d5203464b386dcp1ced4cjsnd78e4dc5e2a8")
-        .end(function (result) {
-            console.log(result.status, result.headers, result.body);
-        });
+    // const unirest = require('unirest')
+    // unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2019-05-01?inboundpartialdate=2019-06-01")
+    //     .header("X-RapidAPI-Key", "8f1774236cmsh7d5203464b386dcp1ced4cjsnd78e4dc5e2a8")
+    //     .end(function (result) {
+    //         console.log(result.status, result.headers, result.body);
+    //     });
     handleChange(e) {
             let value, field;
             field = e.target.name;
