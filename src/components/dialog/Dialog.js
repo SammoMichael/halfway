@@ -6,6 +6,7 @@ export class Dialog extends Component {
         this.state = { languages: [], dialog: '', response: ''};
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.searchLocations = this.searchLocations.bind(this);
     }
     // const unirest = require('unirest')
     // unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2019-05-01?inboundpartialdate=2019-06-01")
@@ -26,6 +27,9 @@ export class Dialog extends Component {
     handleSubmit(e) {
 
         }
+    searchLocations() {
+        
+    }
 
     render() {
     return (
@@ -40,7 +44,7 @@ export class Dialog extends Component {
                     placeholder="say something" 
                     value={this.state.dialog}
                     rows ="3"
-                    cols ="150"
+                    cols ="100"
                 />
                 <textarea 
                     name="response"
@@ -49,9 +53,9 @@ export class Dialog extends Component {
                     placeholder="replies will display here" 
                     value={this.state.response}
                     rows ="5"
-                    cols ="200"
+                    cols ="100"
                 />
-
+                <button onClick={this.searchLocations} />
             </label>
 
         </form>
