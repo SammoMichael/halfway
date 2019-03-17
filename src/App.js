@@ -16,12 +16,16 @@ class App extends Component {
   
   render() {
       var location = {
-      lat: "-1.2884",
-      lng: "36.8233"
+      lat: "13.736717", /* paris */
+      lng: "100.523186"
+      // lat: "48.864716", /* paris */
+      // lng: "2.349014"
     }
       var location2 = {
-      lat: "-1.2884",
-      lng: "25.8233"
+      lat: "55.751244", /* berlin */
+      lng: "37.618423"
+      // lat: "52.520008", /* berlin */
+      // lng: "13.404954"
     }
     return (
       <div className="App">
@@ -38,15 +42,16 @@ class App extends Component {
         <section className="map1"><MapContainer 
           className="map1"
           id="map2"
-          props={location}  /></section>
+          location={location}  /></section>
         <section className="map1"><MapContainer 
           className="map3"
           id="map3"
-          props={location} location2={location2}/></section>
+          location={location} location2={location2}/></section>
         <section className="map2"><MapContainer
           className="map2" 
           id="map2"
-          props={location2} /></section></div>
+          location={location2} /></section>
+          </div>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
             <br />
