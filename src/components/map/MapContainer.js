@@ -77,7 +77,7 @@ export class MapContainer extends Component {
                 this.props.google
             }
             zoom = {
-                6
+                10
             }
             style = {
                 mapStyles

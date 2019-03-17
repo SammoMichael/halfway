@@ -4,7 +4,10 @@
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@google-cloud/translate": "^2.1.4",
     "google-maps-react": "^2.0.2",
+    "google-translate": "^2.2.0",
+    "google-translate-api": "^2.3.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8",

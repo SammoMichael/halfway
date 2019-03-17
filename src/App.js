@@ -7,7 +7,7 @@ import {
   MapContainer,
 } from './components/Index';
 var unirest = require('unirest');
-unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/?query=Stockholm")
+unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/?query=Kashgar")
   .header("X-RapidAPI-Key", "8f1774236cmsh7d5203464b386dcp1ced4cjsnd78e4dc5e2a8")
   .end(function (result) {
     console.log(result.status, result.headers, result.body);
@@ -16,20 +16,25 @@ class App extends Component {
   
   render() {
       var location = {
-      lat: "13.736717", /* paris */
-      lng: "100.523186"
+        lat: 38.745126009439176,
+         lng: -78.32342376891687
+      // lat: "13.736717", /* paris */
+      // lng: "100.523186"
       // lat: "48.864716", /* paris */
       // lng: "2.349014"
     }
       var location2 = {
-      lat: "55.751244", /* berlin */
-      lng: "37.618423"
+        lat: '37',
+        lng: '-122'
+      // lat: "55.751244", /* berlin */
+      // lng: "37.618423"
       // lat: "52.520008", /* berlin */
       // lng: "13.404954"
     }
     return (
       <div className="container">
         <header className="greeting">
+        <br />
         <h1>Welcome to Omni</h1>
         <h2>Make learning friends worldwide</h2>
         <h2>Built in translation features make chatting easy</h2>
@@ -37,7 +42,8 @@ class App extends Component {
         <h2>Have a learning adventure!</h2>
       </header>
         <hr />
-        <h2 className="map-labels"><span className="label">Your Location</span> <span className="label"></span>Your Adventure<span className="label">Their Location</span></h2>
+        <h2 className="map-labels"><span className="label">Your Location: NEW YORK</span> <span className="label"></span>Your Adventure: <a href="https://www.tripadvisor.com/Tourism-g55229-Nashville_Davidson_County_Tennessee-Vacations.html">NASHVILLE</a> <span className="label">Their Location: SAN FRANCISCO</span></h2>
+        <br />
         <hr />
         <div className="mapbox">
         <div className="map1"><MapContainer 
@@ -56,6 +62,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
             <br />
+            
             <Dialog className='dialog' />
           <a
             className="App-link"
