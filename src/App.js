@@ -28,7 +28,7 @@ class App extends Component {
       // lng: "13.404954"
     }
     return (
-      <div className="App">
+      <div className="container">
         <header className="greeting">
         <h1>Welcome to Omni</h1>
         <h2>Make learning friends worldwide</h2>
@@ -36,26 +36,27 @@ class App extends Component {
         <h2>Find halfway points by price or attractions</h2>
         <h2>Have a learning adventure!</h2>
       </header>
+        <hr />
         <h2 className="map-labels"><span className="label">Your Location</span> <span className="label"></span>Your Adventure<span className="label">Their Location</span></h2>
-        
+        <hr />
         <div className="mapbox">
-        <section className="map1"><MapContainer 
+        <div className="map1"><MapContainer 
           className="map1"
           id="map2"
-          location={location}  /></section>
-        <section className="map1"><MapContainer 
+          location={location}  /></div>
+        <div className="map1"><MapContainer 
           className="map3"
           id="map3"
-          location={location} location2={location2}/></section>
-        <section className="map2"><MapContainer
+          location={location} location2={location2}/></div>
+        <div className="map2"><MapContainer
           className="map2" 
           id="map2"
-          location={location2} /></section>
+          location={location2} /></div>
           </div>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
             <br />
-            <Dialog />
+            <Dialog className='dialog' />
           <a
             className="App-link"
             href = "https://github.com/SammoMichael/omni"

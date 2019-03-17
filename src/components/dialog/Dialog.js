@@ -1,5 +1,30 @@
 import React, { Component } from 'react'
 
+
+async function quickstart(
+    projectId = 'YOUR_PROJECT_ID' // Your GCP Project Id
+) {
+    // Imports the Google Cloud client library
+    const {
+        Translate
+    } = require('@google-cloud/translate');
+
+    // Instantiates a client
+    const translate = new Translate({
+        projectId
+    });
+
+    // The text to translate
+    const text = 'Hello, world!';
+
+    // The target language
+    const target = 'ru';
+
+    // Translates some text into Russian
+    const [translation] = await translate.translate(text, target);
+    console.log(`Text: ${text}`);
+    console.log(`Translation: ${translation}`);
+}
 export class Dialog extends Component {
     constructor(props) {
         super(props);
@@ -25,7 +50,9 @@ export class Dialog extends Component {
         }
 
     handleSubmit(e) {
-
+        const response = document.getElementsByClassName('response');
+        e.preventDefault()
+        this.setState({[response]: e.target.value})
         }
     searchLocations() {
         
@@ -33,8 +60,7 @@ export class Dialog extends Component {
 
     render() {
     return (
-      <div>
-        <form>
+        <form className="dialogue-form">
             
             <label>
                 <textarea 
@@ -43,23 +69,23 @@ export class Dialog extends Component {
                     onChange={this.handleChange}
                     placeholder="say something" 
                     value={this.state.dialog}
-                    rows ="3"
-                    cols ="100"
+                    // rows ="3"
+                    // cols ="100"
                 />
                 <textarea 
                     name="response"
                     className="response"
-                    onChange={this.handleChange}
+                    // onChange={this.handleChange}
                     placeholder="replies will display here" 
                     value={this.state.response}
-                    rows ="5"
-                    cols ="100"
+                    // rows ="5"
+                    // cols ="100"
                 />
-                <button onClick={this.searchLocations} />
+                <button 
+                className="submit-button"
+                onClick={this.handleSubmit} />
             </label>
-
         </form>
-      </div>
     )
   }
 }
