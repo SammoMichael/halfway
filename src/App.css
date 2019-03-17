@@ -51,7 +51,7 @@ table {
 /* after reset */
 
 html, body {
-    margin: 40px;
+    margin: 100px;
     background-color: gray;
     width: 100vw;
     height: 100vh;
@@ -60,7 +60,7 @@ html, body {
     text-align: center;
     overflow: hidden;
     font-family: 'Raleway', sans-serif;
-    font-size: 36px;
+    font-size: 30px;
 }
 
 hr {

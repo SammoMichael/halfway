@@ -7,11 +7,9 @@ import {
   MapContainer,
 } from './components/Index';
 var unirest = require('unirest');
-unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/?query=Kashgar")
-  .header("X-RapidAPI-Key", "8f1774236cmsh7d5203464b386dcp1ced4cjsnd78e4dc5e2a8")
-  .end(function (result) {
-    console.log(result.status, result.headers, result.body);
-  });
+unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/JFK-sky/BNA-sky/2019-03-25?inboundpartialdate=2019-04-01")
+.header("X-RapidAPI-Key", "8f1774236cmsh7d5203464b386dcp1ced4cjsnd78e4dc5e2a8")
+
 class App extends Component {
   
   render() {
@@ -62,7 +60,9 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
             <br />
-            
+            <div>Flight: 268 Round Trip </div>
+            <br/>
+            <div> <a href="https://www.tripadvisor.com/AttractionProductReview-g55229-d11448482-Country_Music_Hall_of_Fame_and_Museum_Admission-Nashville_Davidson_County_Tennessee.html">Recommended: Country Music Hall of Fame and Museum</a> </div>
             <Dialog className='dialog' />
           <a
             className="App-link"
