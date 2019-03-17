@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+var client = require('twilio')(
+        'PN71af68bf363a69f3be9d73116ac9a5a3',
+        'c3244ab6e7cc22953b7680d790a8c6d0'
+    );
 
 export class Dialog extends Component {
     constructor(props) {
@@ -25,13 +29,25 @@ export class Dialog extends Component {
         }
 
     handleSubmit(e) {
+        alert('submi')
         const response = document.getElementsByClassName('response');
         e.preventDefault()
         this.setState({[response]: e.target.value})
+        console.log(client);
+        const send = () => {
+            client.messages
+                .create({
+                    from: '+19412601706',
+                    body: this.state.dialog,
+                    to: '+16462991038'
+                })
+                .then(message => console.log(message.sid));
+        };
+        send();
+            }
+        searchLocations() {
+            
         }
-    searchLocations() {
-        
-    }
 
     render() {
     return (
@@ -58,6 +74,7 @@ export class Dialog extends Component {
                 />
                 <button 
                 className="submit-button"
+                value="Send"
                 onClick={this.handleSubmit} />
             </label>
         </form>

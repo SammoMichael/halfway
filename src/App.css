@@ -80,6 +80,15 @@ hr {
   
 }
 
+.submit-button {
+    height: 200px;
+    width: 200px;
+        background-color: cornflowerblue;
+    display: -webkit-inline-box;
+    height: 80px;
+    width: 500px;
+}
+
 .mapbox {
     /* margin: 20px; */
     width: 100vw;
@@ -113,7 +122,9 @@ hr {
   display: flex;
   flex-direction: row;
   width: 100vw;
-  justify-content: space-around;
+  display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 .App-header {
     /* background-color: #282c34;
@@ -159,16 +170,23 @@ hr {
     border: 10px; 
     border-color: brown;
     z-index: 100;
+    position: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+.dialog-form {
     position: absolute;
 
 }
-
 .response {
   width: 20em;
   height: 10em;
   font-size: 20px;
   border: 10px;
   border-color: brown;
+  position: absolute;
 
 }
 
