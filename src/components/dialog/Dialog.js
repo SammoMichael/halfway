@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 var client = require('twilio')(
-        'PN71af68bf363a69f3be9d73116ac9a5a3',
-        'c3244ab6e7cc22953b7680d790a8c6d0'
+        '**************************************',
+        '**************************************'
     );
 
 export class Dialog extends Component {
